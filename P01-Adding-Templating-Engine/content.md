@@ -1,6 +1,6 @@
 ---
-title: "Adding a Template Engine to your Express App"
-slug: adding-templating-engine
+title: "Adding Middleware to your Express App"
+slug: adding-middleware
 ---
 
 # Add your First Middleware - a Template Engine
@@ -29,7 +29,7 @@ Create a folder called `views` and in that folder create a folder called `layout
 .
 ├── app.js
 └── views
-    ├── hello-gif.handlebars
+    ├── home.handlebars
     └── layouts
         └── main.handlebars
 ```

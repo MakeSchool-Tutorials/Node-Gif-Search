@@ -3,7 +3,13 @@ title: "Setting up your NodeJS environment"
 slug: your-node-environment
 ---
 
-For reference you can look at [ExpressJS's Getting Started](https://expressjs.com/en/starter/installing.html) docs
+NodeJS or node.js or just node is a web server built with JavaScript. But... JavaScript is for the client!? What's going on!?
+
+JavaScript only ran in the browser until Google invented the V8 Engine and Ryan Dahl used the V8 Engine to create a JavaScript based server in 2009.
+
+Now Node is a fast growing and popular web server. And now you get to learn how to use it to build a simple gif search engine using the Giphy API.
+
+If you haven't been to [Giphy](giphy.com) before, head over to their website now to see how it works.
 
 # Setting Up Your Node Environment with Package Managers
 
@@ -13,26 +19,26 @@ _Package managers_ are pieces of software that manage the versions of various li
 
 Open your computer's terminal and then...
 
-> [action]
-> If you don't already have Homebrew installed, install that first and then NodeJS & npm.
->
+If you don't already have Homebrew installed, install that first and then NodeJS & npm.
+
 ```bash
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install node
 ```
 
+> [info]
+> Whenever you see the `$` in a command, that means it should be called in your computer's terminal. Remember: Don't include the `$` in your command.`
+
 # Starting a Node Project
 
+Use npm to initialize a Node project.
 
-> [action]
-> Use npm to initialize a Node project.
->
 ```bash
 $ mkdir gif-search
 $ cd gif-search
 $ npm init
+# (hit enter for each option it asks for to select the default choice)
 ```
-> (hit enter for each option it asks for to select the default choice)
 
 Now that you have an folder for your project an initialized a node project with `npm init` you will see that you have a `package.json` file in your folder.
 
@@ -46,14 +52,15 @@ Open up your `package.json` file and set your `main` file to "app.js"
 }
 ```
 
+In future steps we'll create the `app.js` file. That is a more conventional name for the root file of an ExpressJS project.
+
 
 # Add Express Package and Start Node
 
 Now we need to add ExpressJS to this project. We will use npm to install ExpressJS and npm will add a line to our `package.json` file to track the libraries that our project uses. It will also add ExpressJS and its dependences to a `node_modules` folder inside our project. You won't ever need to touch any of the files inside the `node_modules` folder during this tutorial.
 
-> [action]
-> Install ExpressJS to your project
->
+Install ExpressJS to your project
+
 ```
 $ npm install express --save
 ```
@@ -62,9 +69,6 @@ $ npm install express --save
 
 Add an `app.js` file to your project by "touching" it from your terminal - `$ touch app.js`
 
-> [action]
->
->
 ```js
 var express = require('express');
 var app = express();
@@ -105,9 +109,8 @@ app.get('/:username', function (req, res) {
 
 This is an example of an endpoint or route. It is called a _GET_ route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
 
-> [action]
-> Using the code below as a model, create a route that goes to 'hello-squirrel' that prints 'Hello Squirrel' in the web browser.
->
+Using the code below as a model, create a route that goes to 'hello-squirrel' that prints 'Hello Squirrel' in the web browser.
+
 ```js
 // app.js
 var express = require('express');
@@ -121,3 +124,5 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
 ```
+
+For reference you can look at [ExpressJS's Getting Started](https://expressjs.com/en/starter/installing.html) docs
