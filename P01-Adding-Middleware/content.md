@@ -1,7 +1,9 @@
 ---
 title: "Adding a Template Engine to your Express App"
-slug: adding-templating-engine
+slug: adding-middleware
 ---
+
+Now that our NodeJS environment is up and running and we have a basic hello world running in Express, let's extend that with some basic _middleware_ like a templating engine.
 
 # Add your First Middleware - a Template Engine
 
