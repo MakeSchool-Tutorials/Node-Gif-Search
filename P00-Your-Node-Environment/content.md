@@ -13,9 +13,9 @@ If you haven't been to [Giphy](giphy.com) before, head over to their website now
 
 # Setting Up Your Node Environment with Package Managers
 
-We're going to use NodeJS as our _web server_ for this project. We could write just plain JavaScript to use NodeJS, but that would mean writing a lot of _boilerplate_. Instead, we will use the _web framework_ ExpressJS, which uses NodeJS.
+We're going to use NodeJS as our **web server** for this project. We could write just plain JavaScript to use NodeJS, but that would mean writing a lot of **boilerplate**. Instead, we will use the **web framework** ExpressJS, which uses NodeJS.
 
-_Package managers_ are pieces of software that manage the versions of various libraries so they can work together without errors on your computer. We'll use [Homebrew](https://brew.sh/) the MacOS _package manager_ to install [NodeJS](https://nodejs.org/en/). When we install NodeJS, the Node Package Manager (npm) will be installed as well so we can then install node packages (like ExpressJS!).
+**Package managers** are pieces of software that manage the versions of various libraries so they can work together without errors on your computer. We'll use [Homebrew](https://brew.sh/) the MacOS **package manager** to install [NodeJS](https://nodejs.org/en/). When we install NodeJS, the Node Package Manager (npm) will be installed as well so we can then install node packages (like ExpressJS!).
 
 Open your computer's terminal and then...
 
@@ -84,7 +84,7 @@ Once this is in place, run your server from your terminal with this command:
 $ node app.js
 ```
 
-You should see "Gif Search listening on port 3000!" output in your terminal. And if you enter `localhost:3000` into your browser's address bar, you should see `Cannot GET /`. This is because we haven't defined a _root route_, a route for the path: `/`.
+You should see "Gif Search listening on port 3000!" output in your terminal. And if you enter `localhost:3000` into your browser's address bar, you should see `Cannot GET /`. This is because we haven't defined a **root route**, a route for the path: `/`.
 
 > [info]
 > Using the `$ node` method to start your server is kinda annoying because you'll have to stop and restart your server every time you make a change. Instead let's start our node server with a program called `nodemon`.
@@ -94,7 +94,7 @@ You should see "Gif Search listening on port 3000!" output in your terminal. And
 
 Now that we have Node and npm installed we're going to start an Express project and make it say "hello world".
 
-Web servers are built to receive requests to various predefined _URL endpoints_ or _routes_. These routes or endpoints are defined as unique _URL paths_. Let's look at some examples of a path. To get to your public facebook profile, you must go to facebook.com + your facebook user name:
+Web servers are built to receive requests to various predefined **URL endpoints** or **routes**. These routes or endpoints are defined as unique **URL paths**. Let's look at some examples of a path. To get to your public facebook profile, you must go to facebook.com + your facebook user name:
 
 `https://www.facebook.com/YOUR_USER_NAME`
 
@@ -107,7 +107,8 @@ app.get('/:username', function (req, res) {
 })
 ```
 
-This is an example of an endpoint or route. It is called a _GET_ route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
+This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
+This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
 
 Using the code below as a model, create a route that goes to 'hello-squirrel' that prints 'Hello Squirrel' in the web browser.
 

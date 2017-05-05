@@ -3,11 +3,11 @@ title: "Adding a Template Engine to your Express App"
 slug: adding-middleware
 ---
 
-Now that our NodeJS environment is up and running and we have a basic hello world running in Express, let's extend that with some basic _middleware_ like a templating engine.
+Now that our NodeJS environment is up and running and we have a basic hello world running in Express, let's extend that with some basic **middleware** like a templating engine.
 
 # Add your First Middleware - a Template Engine
 
-ExpressJS is a light weight or _unopinionated_ web framework, meaning it does not make decisions for you, it lets the developer decide on what plugins to use. These plugins or libraries we use to extend a web framework are called _middleware_. The first piece of middleware we are going to add is a template engine so we can render HTML templates.
+ExpressJS is a light weight or **unopinionated** web framework, meaning it does not make decisions for you, it lets the developer decide on what plugins to use. These plugins or libraries we use to extend a web framework are called **middleware**. The first piece of middleware we are going to add is a template engine so we can render HTML templates.
 
 We're going to use [Handlebars.js](http://handlebarsjs.com/) - a minimalistic, logicless templating library for server-side templating. Handlebars.js is a stand-alone library, but to use it in the context of ExpressJS we can use the [express-handlebars](https://github.com/ericf/express-handlebars) library.
 

@@ -7,15 +7,16 @@ Let's look back at what we did in order:
 
 1. First we got the environment up and running with a simple hello world.
 2. Then we setup the templating with Handlebars.js and upated our hello world to use a template.
-3. Then we added a search form and made sure that search term was making it to our server.
+3. Then we started from what the user sees - the template - and added a search form
+4. Next we made sure that search term was making it to our server.
 4. Then we proved we could get GIFs from Giphy.
 5. Then we put our search term together with our proof we could get GIFs.
 
 Throughout this initial development we made sure things looked OK, but we didn't spend a lot of time making things beautiful. Once basic functionality is working then we can invest more time making this look pretty.
 
-# Adding _Static Assets_: Scripts, Stylesheets, and Images
+# Adding **Static Assets**: Scripts, Stylesheets, and Images
 
-To add styles to our templates we need to use Cascading Style Sheets or .css files which are one type of _static assets_. Other static assets are JavaScript scripts, images, and even fonts. The browser can then ask for these assets from the server and then they run on the browser.
+To add styles to our templates we need to use Cascading Style Sheets or .css files which are one type of **static assets**. Other static assets are JavaScript scripts, images, and even fonts. The browser can then ask for these assets from the server and then they run on the browser.
 
 But remember how Express is lightweight? It is SO lightweight that it doesn't even serve up anything to the browser unless we tell it to do so. So let's do that now:
 
@@ -104,4 +105,9 @@ Now let's add some more styles
       color: #FE7880;
     }
     ```
-1.
+
+Ok no we have things a little prettier!
+
+# Now Your Turn!
+
+What can you do next? What features could you add?

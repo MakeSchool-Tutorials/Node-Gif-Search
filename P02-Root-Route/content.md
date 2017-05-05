@@ -7,7 +7,7 @@ So we have NodeJS and ExpressJS working and we've added a templating engine midd
 
 # Adding a Root Route to your Gif Search
 
-Let's add a _root route_ (a url endpoint that goes to the root path: `/`). And let's render a template called `home.handlebars`.
+Let's add a **root route** (a url endpoint that goes to the root path: `/`). And let's render a template called `home.handlebars`.
 
 ```js
 app.get('/', function (req, res) {
@@ -37,4 +37,4 @@ Navigate to `localhost:3000` and let's look at your form. Pretty plain but it wi
 Enter something into the input field and hit enter or click on `Submit`.
 
 > [solution]
-> Your form should navigate you to `/?term=YOUR+SEARCH+TERM`. This means that their will be a _url query string_ available called `term` inside of your root route.
+> Your form should navigate you to `/?term=YOUR+SEARCH+TERM`. This means that their will be a **url query string** available called `term` inside of your root route.

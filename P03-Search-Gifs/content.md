@@ -32,7 +32,7 @@ Example app listening on port 3000!
 
 Now we want to use the Giphy API to get some data.
 
-An API stands for Application Programming Interface. If a UI is a User Interface, or how humans use a program, an API is the way another computer program uses a program. APIs are other web servers with their own url endpoints much like the ones you are creating now. Instead of returning HTML templates, however, API endpoints return structured data called JSON.
+An **API** stands for **Application Programming Interface**. If a **UI** is a **User Interface**, or how humans use a program, an API is the way another computer program uses a program. APIs are other web servers with their own url endpoints much like the ones you are creating now. Instead of returning HTML templates, however, API endpoints return structured data called JSON.
 
 > [info]
 > JSON is a series key/value pairs that can be nested into a hierarchical tree structure, for example:
@@ -53,7 +53,7 @@ An API stands for Application Programming Interface. If a UI is a User Interface
 
 ## Connecting to the Giphy API with `http`
 
-There are two options for using an API. Either you can use the native Node `http` module to call `http.get()` to make a request to these APIs, or someone might have made a _wrapper_ to make communicating with an API easier.
+There are two options for using an API. Either you can use the native Node `http` module to call `http.get()` to make a request to these APIs, or someone might have made a **wrapper** to make communicating with an API easier.
 
 In this example we are going to avoid adding new modules to our project, so we'll use the `http` module to query the Giphy API search endpoint.
 
@@ -95,7 +95,7 @@ app.get('/', function (req, res) {
 ```
 
 > [info]
-> Node's `http` module uses a data type called a _stream_ to receive data as it "streams" into your server. That is why we have to add all the data into the `body` variable and wait until it is done streaming with the `response.on('end')` function. Weird right!? Node does this to take advantage of its unblocking I/O nature. What does that mean?
+> Node's `http` module uses a data type called a **stream** to receive data as it "streams" into your server. That is why we have to add all the data into the `body` variable and wait until it is done streaming with the `response.on('end')` function. Weird right!? Node does this to take advantage of its unblocking I/O nature. What does that mean?
 
 Now update your template and use the Handlebars.js `{{#each}}` iterator to loop over the array of gifs that Giphy has returned.
 
@@ -160,4 +160,4 @@ app.get('/', function (req, res) {
 
 Still work?
 
-This called _refactoring_ code. Developers refactor code to make code more _elegant_ meaning more economical, more efficient, and more easy to read.
+This called **refactoring** code. Developers refactor code to make code more **elegant** meaning more economical, more efficient, and more easy to read.
