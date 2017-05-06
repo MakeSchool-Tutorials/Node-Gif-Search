@@ -111,3 +111,5 @@ Ok no we have things a little prettier!
 # Now Your Turn!
 
 What can you do next? What features could you add?
+
+Feel free to reference [this repo](https://github.com/ajbraus/giphy-search) for a solution.
