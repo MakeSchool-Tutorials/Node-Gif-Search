@@ -6,7 +6,7 @@ slug: add-styling
 Let's look back at what we did in order:
 
 1. First we got the environment up and running with a simple hello world.
-2. Then we setup the templating with Handlebars.js and upated our hello world to use a template.
+2. Then we setup the templating with Handlebars.js and updated our hello world to use a template.
 3. Then we started from what the user sees - the template - and added a search form
 4. Next we made sure that search term was making it to our server.
 4. Then we proved we could get GIFs from Giphy.

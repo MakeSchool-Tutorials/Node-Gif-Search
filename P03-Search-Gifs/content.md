@@ -36,7 +36,8 @@ An **API** stands for **Application Programming Interface**. If a **UI** is a **
 
 > [info]
 > JSON is a series key/value pairs that can be nested into a hierarchical tree structure, for example:
-```js
+>
+> ```
 {
   user: {
     name: "Samuel",
@@ -49,7 +50,7 @@ An **API** stands for **Application Programming Interface**. If a **UI** is a **
     ]
   }
 }
-```
+> ```
 
 ## Connecting to the Giphy API with `http`
 
@@ -147,7 +148,7 @@ Next change your `app.js` file and root route to look like this:
 // app.js
 
 // INITIALIZE THE GIPHY-API LIBRARY
-var giphy = require('giphy-api');
+var giphy = require('giphy-api')();
 
 ...
 
