@@ -21,6 +21,9 @@ Open your computer's terminal and then...
 
 If you don't already have Homebrew installed, install that first and then NodeJS & npm.
 
+
+#### Mac Instructions:
+
 ```bash
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install node
@@ -29,15 +32,25 @@ $ brew install node
 > [info]
 > Whenever you see the `$` in a command, that means it should be called in your computer's terminal. Remember: Don't include the `$` in your command.`
 
+#### Windows Instructions
+
+Choose the proper installer at the [Node.js download](https://nodejs.org/en/download/) page.
+
+Now open your Command Prompt program and type `npm -v` to check if npm is installed. This should print out a version number, e.g. `4.10.0`.
+
 # Starting a Node Project
 
-Use npm to initialize a Node project.
+> [info]
+> If you do not already have a text editor, download and install the [Atom Text Editor](https://atom.io/).
+
+Use npm to initialize a Node project from the commandline.
 
 ```bash
 $ mkdir gif-search
 $ cd gif-search
 $ npm init
 # (hit enter for each option it asks for to select the default choice)
+$ atom . # to open your project in the Atom text editor
 ```
 
 Now that you have an folder for your project an initialized a node project with `npm init` you will see that you have a `package.json` file in your folder.
@@ -53,7 +66,6 @@ Open up your `package.json` file and set your `main` file to "app.js"
 ```
 
 In future steps we'll create the `app.js` file. That is a more conventional name for the root file of an ExpressJS project.
-
 
 # Add Express Package and Start Node
 
