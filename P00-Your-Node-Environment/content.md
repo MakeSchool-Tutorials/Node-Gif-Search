@@ -79,7 +79,19 @@ $ npm install express --save
 
 # Adding `app.js`
 
-Add an `app.js` file to your project by "touching" it from your terminal - `$ touch app.js`
+Add an `app.js` file to your project.
+
+Mac:
+```
+$ touch app.js
+```
+
+Windows:
+```
+> app.js
+```
+
+Now add this code that add express to the file, then uses it to start a web server.
 
 ```js
 var express = require('express');
