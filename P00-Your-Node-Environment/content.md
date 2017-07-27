@@ -9,7 +9,7 @@ JavaScript only ran in the browser until Google invented the V8 Engine and Ryan 
 
 Now Node is a fast growing and popular web server. And now you get to learn how to use it to build a simple gif search engine using the Giphy API.
 
-If you haven't been to [Giphy](giphy.com) before, head over to their website now to see how it works.
+If you haven't been to [Giphy](https://giphy.com) before, head over to their website now to see how it works.
 
 # Setting Up Your Node Environment with Package Managers
 
