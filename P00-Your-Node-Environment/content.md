@@ -82,11 +82,13 @@ $ npm install express --save
 Add an `app.js` file to your project.
 
 Mac:
+
 ```
 $ touch app.js
 ```
 
 Windows:
+
 ```
 > app.js
 ```
