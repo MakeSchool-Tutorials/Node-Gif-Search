@@ -58,7 +58,7 @@ Your `main.handlebars` file should look like this. The triple brackets `{{{}}}` 
 Let's update the hello world route to be a hello gif route.
 
 ```js
-// index.js
+// app.js
 
 app.get('/hello-gif', function (req, res) {
   var gifUrl = 'http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif'
