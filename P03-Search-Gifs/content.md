@@ -3,7 +3,7 @@ title: "Searching Giphy"
 slug: search-gifs
 ---
 
-So no we have done some templating, so we are ready to build the actual feature of the app we want: a Giphy Search.
+So now we have done some templating, so we are ready to build the actual feature of the app we want: a Giphy Search.
 
 # Adding a Search to the Root Route (Step 1 - Getting Search Term)
 
