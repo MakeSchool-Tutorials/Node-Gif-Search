@@ -14,7 +14,7 @@ Let's update our root route to use that url query string called `term` that we a
 Let's use the JavaScript `console.log()` function to print the url query string and check that the url query string is available in the server. Since you are calling `console.log()` on the server, the log will print out on the terminal
 
 ```js
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log(req.query)
   res.render('home')
 })
@@ -64,30 +64,30 @@ Update your `app.js` root route to use the `http` to query the Giphy API and use
 // app.js
 ...
 // REQUIRE HTTP MODULE
-var http = require('http');
+const http = require('http');
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log(req.query.term)
-  var queryString = "funny cat";
+  let queryString = "funny cat";
   // ENCODE THE QUERY STRING TO REMOVE WHITE SPACES AND RESTRICTED CHARACTERS
-  var term = encodeURIComponent(queryString);
+  let term = encodeURIComponent(queryString);
   // PUT THE SEARCH TERM INTO THE GIPHY API SEARCH URL
-  var url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC'
+  let url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC'
 
-  http.get(url, function(response) {
+  http.get(url, (response) => {
     // SET ENCODING OF RESPONSE TO UTF8
     response.setEncoding('utf8');
 
-    var body = '';
+    let body = '';
 
-    response.on('data', function(d) {
+    response.on('data', (d) => {
       // CONTINUOUSLY UPDATE STREAM WITH DATA FROM GIPHY
-      body += d;
+      let += d;
     });
 
-    response.on('end', function() {
+    response.on('end', () => {
       // WHEN DATA IS FULLY RECEIVED PARSE INTO JSON
-      var parsed = JSON.parse(body);
+      let parsed = JSON.parse(body);
       // RENDER THE HOME TEMPLATE AND PASS THE GIF DATA IN TO THE TEMPLATE
       res.render('home', {gifs: parsed.data})
     });
@@ -116,8 +116,8 @@ We access each gif's images and we use the `fixed_height` version so all the gif
 So now we have to update our code to use the actual term we are getting from our input field. All we have to do is put our `req.query.term` variable in for "funny cat", and now whatever we enter into the form will be queried.
 
 ```js
-app.get('/', function (req, res) {
-  var queryString = req.query.term;
+app.get('/', (req, res) => {
+  let queryString = req.query.term;
 ...
 });
 ```
@@ -148,12 +148,12 @@ Next change your `app.js` file and root route to look like this:
 // app.js
 
 // INITIALIZE THE GIPHY-API LIBRARY
-var giphy = require('giphy-api')();
+const giphy = require('giphy-api')();
 
 ...
 
-app.get('/', function (req, res) {
-  giphy.search(req.query.term, function (err, response) {
+app.get('/', (req, res) => {
+  giphy.search(req.query.term, (err, response) => {
     res.render('home', {gifs: response.data})
   });
 });

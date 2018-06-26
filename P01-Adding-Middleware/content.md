@@ -17,7 +17,7 @@ $ npm install express-handlebars --save
 
 ```js
 // app.js
-var exphbs  = require('express-handlebars');
+const exphbs  = require('express-handlebars');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -60,8 +60,8 @@ Let's update the hello world route to be a hello gif route.
 ```js
 // app.js
 
-app.get('/hello-gif', function (req, res) {
-  var gifUrl = 'http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif'
+app.get('/hello-gif', (req, res) => {
+  let gifUrl = 'http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif'
   res.render('hello-gif', {gifUrl: gifUrl})
 })
 ```
@@ -82,8 +82,8 @@ Let's add another route. This time let's use a variable in the route in order to
 >
 ```js
 // index.js
-app.get('/greetings/:name', function (req, res) {
-  var name = req.params.name;
+app.get('/greetings/:name', (req, res) => {
+  let name = req.params.name;
   res.render('greetings', {name: name});
 })
 ```

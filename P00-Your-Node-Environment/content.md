@@ -15,7 +15,7 @@ If you haven't been to [Giphy](https://giphy.com) before, head over to their web
 
 We're going to use NodeJS as our **web server** for this project. We could write just plain JavaScript to use NodeJS, but that would mean writing a lot of **boilerplate**. Instead, we will use the **web framework** ExpressJS, which uses NodeJS.
 
-**Package managers** are pieces of software that manage the versions of various libraries so they can work together without errors on your computer. We'll use [Homebrew](https://brew.sh/) the MacOS **package manager** to install [NodeJS](https://nodejs.org/en/). When we install NodeJS, the Node Package Manager (npm) will be installed as well so we can then install node packages (like ExpressJS!).
+**Package managers** are pieces of software that manage the versions of various libraries so they can work together without errors on your computer. We'll use [Homebrew](https://brew.sh/), the MacOS **package manager**, to install [NodeJS](https://nodejs.org/en/). When we install NodeJS, the Node Package Manager (npm) will be installed as well, so we can then install node packages (like ExpressJS!).
 
 Open your computer's terminal and then...
 
@@ -43,6 +43,7 @@ Now open your Command Prompt program and type `npm -v` to check if npm is instal
 > [info]
 > If you do not already have a text editor, download and install the [Atom Text Editor](https://atom.io/).
 
+
 Use npm to initialize a Node project from the commandline.
 
 ```bash
@@ -53,19 +54,7 @@ $ npm init
 $ atom . # to open your project in the Atom text editor
 ```
 
-Now that you have an folder for your project an initialized a node project with `npm init` you will see that you have a `package.json` file in your folder.
-
-Open up your `package.json` file and set your `main` file to "app.js"
-
-```json
-{
-  ...
-  "main": "app.js",
-  ...
-}
-```
-
-In future steps we'll create the `app.js` file. That is a more conventional name for the root file of an ExpressJS project.
+Now that you initialized your node project with `npm init`, you will see that you have a `package.json` file in your folder.
 
 # Add Express Package and Start Node
 
@@ -79,7 +68,7 @@ $ npm install express --save
 
 # Adding `app.js`
 
-Add an `app.js` file to your project.
+Add a file named `app.js` to your project. This is a more conventional name for the root file of an ExpressJS project.
 
 Mac:
 
@@ -96,12 +85,22 @@ Windows:
 Now add this code that add express to the file, then uses it to start a web server.
 
 ```js
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log('Gif Search listening on port localhost:3000!');
 });
+```
+
+Finally, open up your `package.json` file and set your `main` file to "app.js"
+
+```json
+{
+  ...
+  "main": "app.js",
+  ...
+}
 ```
 
 Once this is in place, run your server from your terminal with this command:
@@ -114,7 +113,7 @@ You should see "Gif Search listening on port 3000!" output in your terminal. And
 
 > [info]
 > Using the `$ node` method to start your server is kinda annoying because you'll have to stop and restart your server every time you make a change. Instead let's start our node server with a program called `nodemon`.
-> Install `nodemon` by typing this into your terminal `$ npm install nodemon -g`. Now being your server by typing `$ nodemon`. Now your server will restart anytime you make any changes to your code.
+> Install `nodemon` by typing this into your terminal `$ npm install nodemon -g`. Now begin your server by typing `$ nodemon`. Now your server will restart anytime you make any changes to your code.
 
 # Your First Route in an Express Project
 
@@ -127,27 +126,26 @@ Web servers are built to receive requests to various predefined **URL endpoints*
 In express this would be defined like this:
 
 ```js
-app.get('/:username', function (req, res) {
+app.get('/:username', (req, res) => {
   // Here you would look up the user from the database
   // Then render the template to display the users's info
 })
 ```
 
 This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
-This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
 
 Using the code below as a model, create a route that goes to 'hello-squirrel' that prints 'Hello Squirrel' in the web browser.
 
 ```js
 // app.js
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.get('/hello-world', function (req, res) {
+app.get('/hello-world', (req, res) => {
   res.send('Hello World');
 });
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
 ```
