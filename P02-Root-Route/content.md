@@ -9,11 +9,15 @@ So we have NodeJS and ExpressJS working and we've added a templating engine midd
 
 Let's add a **root route** (a url endpoint that goes to the root path: `/`). And let's render a template called `home.handlebars`.
 
-```js
-app.get('/', (req, res) => {
-  res.render('home')
-})
-```
+> [action]
+> Add a root route and render the template `home`.
+>
+>```js
+  // ROUTES
+  app.get('/', (req, res) => {
+    res.render('home')
+  })
+>```
 
 ```html
 <h1>Search for GIFS</h1>

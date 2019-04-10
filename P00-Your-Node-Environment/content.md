@@ -24,13 +24,16 @@ If you don't already have Homebrew installed, install that first and then NodeJS
 
 #### Mac Instructions:
 
-```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew install node
-```
+> [action]
+> Now run this in your terminal to install homebrew:
+>
+>```bash
+  $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  $ brew install node
+>```
 
 > [info]
-> Whenever you see the `$` in a command, that means it should be called in your computer's terminal. Remember: Don't include the `$` in your command.`
+> **IMPORTANT**—Whenever you see the `$` in a command, that means it should be called in your computer's terminal. Remember: Don't include the `$` in your command.`
 
 #### Windows Instructions
 
@@ -43,15 +46,16 @@ Now open your Command Prompt program and type `npm -v` to check if npm is instal
 > [info]
 > If you do not already have a text editor, download and install the [Atom Text Editor](https://atom.io/).
 
-Use npm to initialize a Node project from the commandline.
-
-```bash
-$ mkdir gif-search
-$ cd gif-search
-$ npm init
-# (hit enter for each option it asks for to select the default choice)
-$ atom . # to open your project in the Atom text editor
-```
+> [action]
+> Use npm to initialize a Node project from the commandline.
+>
+>```bash
+  $ mkdir gif-search
+  $ cd gif-search
+  $ npm init
+  # (hit enter for each option it asks for to select the default choice)
+  $ atom . # to open your project in the Atom text editor
+>```
 
 Now that you have an folder for your project an initialized a node project with `npm init` you will see that you have a `package.json` file in your folder.
 
@@ -71,11 +75,13 @@ In future steps we'll create the `app.js` file. That is a more conventional name
 
 Now we need to add ExpressJS to this project. We will use npm to install ExpressJS and npm will add a line to our `package.json` file to track the libraries that our project uses. It will also add ExpressJS and its dependences to a `node_modules` folder inside our project. You won't ever need to touch any of the files inside the `node_modules` folder during this tutorial.
 
-Install ExpressJS to your project
 
-```
-$ npm install express --save
-```
+> [action]
+> Install ExpressJS to your project
+>
+>```bash
+  $ npm install express --save
+>```
 
 # Adding `app.js`
 

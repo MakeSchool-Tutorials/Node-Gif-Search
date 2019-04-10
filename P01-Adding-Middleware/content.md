@@ -11,9 +11,12 @@ ExpressJS is a light weight or **unopinionated** web framework, meaning it does 
 
 We're going to use [Handlebars.js](http://handlebarsjs.com/) - a minimalistic, logicless templating library for server-side templating. Handlebars.js is a stand-alone library, but to use it in the context of ExpressJS we can use the [express-handlebars](https://github.com/ericf/express-handlebars) library.
 
-```bash
-$ npm install express-handlebars --save
-```
+> [action]
+> Install `express-handlebars`
+>
+>```bash
+  $ npm install express-handlebars --save
+>```
 
 We're going to now put this code in the `// Middleware` section of our `app.js` file.
 
@@ -33,7 +36,10 @@ This "middleware" library will be used to allow Express (our web framework) to r
 
 # Views & Layout Folder Structure
 
-Create a folder called `views` and in that folder create a folder called `layouts`. Inside your `layouts` folder create a file called `main.handlebars`. So your file structure should look like this:
+> [action]
+> Create a folder called `views` and in that folder create a folder called `layouts`. Inside your `layouts` folder create a file called `main.handlebars`.
+
+So your file structure should look like this:
 
 ```
 .
