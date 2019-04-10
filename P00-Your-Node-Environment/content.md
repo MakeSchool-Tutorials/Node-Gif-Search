@@ -123,7 +123,6 @@ app.listen(3000, () => {
 
 > [action]
 > Once this is in place, run your server from your terminal with this command:
-
   ```bash
   $ node app.js
   ```
