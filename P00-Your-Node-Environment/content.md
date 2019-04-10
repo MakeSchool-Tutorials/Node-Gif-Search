@@ -81,13 +81,17 @@ $ npm install express --save
 
 Add an `app.js` file to your project.
 
-Mac:
+You can either use your terminal to create your root file `app.js` or you can use atom.
+
+In atom, right click on the project folder and select **New File**, then type `app.js` and hit enter.
+
+In your terminal, make sure you are in the root of your project directory, then use the `touch` command which makes a new file:
 
 ```
-$ touch app.js
+(giphy-search)$ touch app.js
 ```
 
-Windows:
+Windows terminal is a bit different:
 
 ```
 > app.js
@@ -95,9 +99,20 @@ Windows:
 
 Now add this code that add express to the file, then uses it to start a web server.
 
+This code also has some **Comments** that separate out the various parts of the `app.js` file. Throughout this tutorial, we'll be updating this file, so keep your eyes peeled for these comments as clues for where code goes.
+
 ```js
+// Require Libraries
 var express = require('express');
+
+// App Setup
 var app = express();
+
+// Middleware
+
+// Routes
+
+// Start Server
 
 app.listen(3000, function () {
   console.log('Gif Search listening on port localhost:3000!');
