@@ -123,9 +123,10 @@ app.listen(3000, () => {
 
 > [action]
 > Once this is in place, run your server from your terminal with this command:
-  ```bash
+>```
+  bash
   $ node app.js
-  ```
+>```
 
 You should see "Gif Search listening on port 3000!" output in your terminal. And if you enter `localhost:3000` into your browser's address bar, you should see `Cannot GET /`. This is because we haven't defined a **root route**, a route for the path: `/`.
 
