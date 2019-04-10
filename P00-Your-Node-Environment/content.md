@@ -81,7 +81,9 @@ $ npm install express --save
 
 Add an `app.js` file to your project.
 
-You can either use your terminal to create your root file `app.js` or you can use atom.
+You can either use your terminal to create your root file `app.js` or you can use atom. You can watch this brief video to review how to do this:
+
+![file-creation-video](https://www.youtube.com/watch?v=DI77fe5aEOM)
 
 In atom, right click on the project folder and select **New File**, then type `app.js` and hit enter.
 
