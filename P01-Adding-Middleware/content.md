@@ -15,13 +15,21 @@ We're going to use [Handlebars.js](http://handlebarsjs.com/) - a minimalistic, l
 $ npm install express-handlebars --save
 ```
 
+We're going to now put this code in the `// Middleware` section of our `app.js` file.
+
 ```js
 // app.js
-var exphbs  = require('express-handlebars');
+
+...
+
+// Middleware
+const exphbs  = require('express-handlebars');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 ```
+
+This "middleware" library will be used to allow Express (our web framework) to render HTML templates and send them back to the client using a new function: `res.render('template-name', { variables })`
 
 # Views & Layout Folder Structure
 
@@ -60,9 +68,9 @@ Let's update the hello world route to be a hello gif route.
 ```js
 // app.js
 
-app.get('/hello-gif', function (req, res) {
-  var gifUrl = 'http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif'
-  res.render('hello-gif', {gifUrl: gifUrl})
+app.get('/hello-gif', (req, res) => {
+  const gifUrl = 'http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif'
+  res.render('hello-gif', { gifUrl })
 })
 ```
 
@@ -82,9 +90,9 @@ Let's add another route. This time let's use a variable in the route in order to
 >
 ```js
 // index.js
-app.get('/greetings/:name', function (req, res) {
-  var name = req.params.name;
-  res.render('greetings', {name: name});
+app.get('/greetings/:name', (req, res) => {
+  const name = req.params.name;
+  res.render('greetings', { name });
 })
 ```
 ```html

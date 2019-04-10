@@ -103,10 +103,10 @@ This code also has some **Comments** that separate out the various parts of the 
 
 ```js
 // Require Libraries
-var express = require('express');
+const express = require('express');
 
 // App Setup
-var app = express();
+const app = express();
 
 // Middleware
 
@@ -114,7 +114,7 @@ var app = express();
 
 // Start Server
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log('Gif Search listening on port localhost:3000!');
 });
 ```
@@ -142,7 +142,8 @@ Web servers are built to receive requests to various predefined **URL endpoints*
 In express this would be defined like this:
 
 ```js
-app.get('/:username', function (req, res) {
+// Routes
+app.get('/:username', (req, res) => {
   // Here you would look up the user from the database
   // Then render the template to display the users's info
 })
@@ -155,14 +156,21 @@ Using the code below as a model, create a route that goes to 'hello-squirrel' th
 
 ```js
 // app.js
-var express = require('express');
-var app = express();
+// Require Libraries
+const express = require('express');
 
-app.get('/hello-world', function (req, res) {
+// App Setup
+const app = express();
+
+// Middleware
+
+// Routes
+app.get('/hello-world', (req, res) => {
   res.send('Hello World');
 });
 
-app.listen(3000, function () {
+// Start Server
+app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
 ```

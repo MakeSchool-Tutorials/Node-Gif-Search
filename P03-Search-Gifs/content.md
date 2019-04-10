@@ -69,14 +69,15 @@ Let's use the giphy API wrapper called `giphy-api` that makes interacting with t
   // app.js
   // Require Libraries
   ...
-  var giphy = require('giphy-api')();
+  const giphy = require('giphy-api')();
 
   ...
 
   // Routes
-  app.get('/', function (req, res) {
-    giphy.search(req.query.term, function (err, response) {
-      res.render('home', {gifs: response.data})
+  app.get('/', (req, res) => {
+    giphy.search(req.query.term, (err, response) => {
+      const gifs = response.data;
+      res.render('home', { gifs })
     });
   });
   ```
@@ -100,32 +101,32 @@ Update your `app.js` root route to use the `http` to query the Giphy API and use
 // app.js
 ...
 // REQUIRE HTTP MODULE
-var http = require('http');
+const http = require('http');
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log(req.query.term)
-  var queryString = "funny cat";
+  const queryString = "funny cat";
   // ENCODE THE QUERY STRING TO REMOVE WHITE SPACES AND RESTRICTED CHARACTERS
-  var term = encodeURIComponent(queryString);
+  const term = encodeURIComponent(queryString);
   // PUT THE SEARCH TERM INTO THE GIPHY API SEARCH URL
-  var url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC'
+  const url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC'
 
-  http.get(url, function(response) {
+  http.get(url, (response) => {
     // SET ENCODING OF RESPONSE TO UTF8
     response.setEncoding('utf8');
 
     var body = '';
 
-    response.on('data', function(d) {
+    response.on('data', (d) => {
       // CONTINUOUSLY UPDATE STREAM WITH DATA FROM GIPHY
       body += d;
     });
 
-    response.on('end', function() {
+    response.on('end', () => {
       // WHEN DATA IS FULLY RECEIVED PARSE INTO JSON
-      var parsed = JSON.parse(body);
+      const gifs = JSON.parse(body).data
       // RENDER THE HOME TEMPLATE AND PASS THE GIF DATA IN TO THE TEMPLATE
-      res.render('home', {gifs: parsed.data})
+      res.render('home', { gifs });
     });
   });
 })

@@ -10,7 +10,7 @@ So we have NodeJS and ExpressJS working and we've added a templating engine midd
 Let's add a **root route** (a url endpoint that goes to the root path: `/`). And let's render a template called `home.handlebars`.
 
 ```js
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.render('home')
 })
 ```
@@ -47,7 +47,7 @@ Let's use the JavaScript `console.log()` function to print the url query string 
 
 ```js
 // example URL "http://localhost:3000/?term=hey"
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log(req.query) // => "{ term: hey" }
   res.render('home')
 })
