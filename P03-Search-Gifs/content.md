@@ -86,10 +86,8 @@ $ npm install tenorjs --save
   const Tenor = require("tenorjs").client({
     // Replace with your own key
     "Key": "TENOR_API_KEY", // https://tenor.com/developer/keyregistration
-    "Filter": "off", // "off", "low", "medium", "high", not case sensitive
+    "Filter": "high", // "off", "low", "medium", "high", not case sensitive
     "Locale": "en_US", // Your locale here, case-sensitivity depends on input
-    "MediaFilter": "minimal", // either minimal or basic, not case sensitive
-    "DateFormat": "D/MM/YYYY - H:mm:ss A" // Change this accordingly
 });
 >
   ...
