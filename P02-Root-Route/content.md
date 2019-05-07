@@ -83,3 +83,13 @@ Example app listening on port 3000!
 ```
 
 Alright, we know how to capture our term, let's build out our search form now to actually return some gifs. Onward!
+
+# Now Commit
+
+>[action]
+>
+```bash
+$ git add .
+$ git commit -m 'added search form'
+$ git push
+```
