@@ -1,5 +1,5 @@
 ---
-title: "Searching Giphy"
+title: "Searching Tenor"
 slug: search-gifs
 ---
 
@@ -30,7 +30,7 @@ An **API** stands for **Application Programming Interface**. If a **UI** is a **
 
 # Updating the Template
 
-It is a **Best Practice** to work from the "outside-in" so from what the user experiences in the views back to the controller logic and database structure. So we can start by making an HTML template (enhanced by Handlebars) ready to display images from the giphy API.
+It is a **Best Practice** to work from the "outside-in" so from what the user experiences in the views back to the controller logic and database structure. So we can start by making an HTML template (enhanced by Handlebars) ready to display images from the tenor API.
 
 We'll use the Handlebars.js `{{#each}}` iterator to loop over the array of gifs that the Tenor API will return.
 

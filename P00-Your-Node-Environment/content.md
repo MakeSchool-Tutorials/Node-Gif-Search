@@ -7,9 +7,9 @@ NodeJS or node.js or just node, is a web server built with JavaScript. But... Ja
 
 JavaScript only ran in the browser until Google invented the V8 Engine and Ryan Dahl used the V8 Engine to create a JavaScript based server in 2009.
 
-Now Node is a fast growing and popular web server. And now you get to learn how to use it to build a simple gif search engine using the Giphy API.
+Now Node is a fast growing and popular web server. And now you get to learn how to use it to build a simple gif search engine using the Tenor API.
 
-If you haven't been to [Giphy](https://giphy.com) before, head over to their website now to see how it works.
+If you haven't been to [Tenor](https://tenor.com) before, head over to their website now to see how it works.
 
 # Setting Up Your Node Environment with Package Managers
 
@@ -115,7 +115,7 @@ Now we need to make a repository for our project.
 
 > [action]
 >
-> Go to GitHub and create a public repository called `giphy-search`. Don't worry about the `.gitignore` or `LICENSE` for now, we'll cover that another time.
+> Go to GitHub and create a public repository called `tenor-search`. Don't worry about the `.gitignore` or `LICENSE` for now, we'll cover that another time.
 
 Finally, you need to associate it as a remote for your local git project and then push to it.
 

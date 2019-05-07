@@ -84,7 +84,7 @@ Let's update the our main route from displaying text to showing a gif:
 ```js
 app.get('/', (req, res) => {
   // set the url of the gif
-  const gifUrl = 'https://media.giphy.com/media/26ufcfqqe6Fobdygg/giphy.gif'
+  const gifUrl = 'https://media1.tenor.com/images/ace67f6147cf0ab6e625dcaac1c8e060/tenor.gif?itemid=14039077'
   // render the hello-gif view, passing the gifUrl into the view to be displayed
   res.render('hello-gif', { gifUrl })
 })
