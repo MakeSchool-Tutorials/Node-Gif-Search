@@ -119,6 +119,16 @@ When you refresh your root route with nothing in the form, why do you still see 
 
 Try adding a query term to your url to see an actual search: e.g. `?term=kittens`
 
+# Now Commit
+
+>[action]
+>
+```bash
+$ git add .
+$ git commit -m 'added working gif search'
+$ git push
+```
+
 # Connecting to the Tenor API with `http` (optional stretch challenge)
 
 Now that we've setup receiving the `tenorjs` package. As a strech challenge you can implement the query to the API without a library using Node's native `http` module, and deal with the stream of data coming from that http endpoint.
