@@ -84,7 +84,7 @@ Let's update the our main route from displaying text to showing a gif:
 ```js
 app.get('/', (req, res) => {
   // set the url of the gif
-  const gifUrl = 'https://media1.tenor.com/images/ace67f6147cf0ab6e625dcaac1c8e060/tenor.gif?itemid=14039077'
+  const gifUrl = 'https://media1.tenor.com/images/561c988433b8d71d378c9ccb4b719b6c/tenor.gif?itemid=10058245'
   // render the hello-gif view, passing the gifUrl into the view to be displayed
   res.render('hello-gif', { gifUrl })
 })
@@ -101,7 +101,7 @@ app.get('/', (req, res) => {
 
 Reload your browser, and you should now see an adorable gif in place of the text!
 
-![gif](assets/gif.png)
+![gif](assets/puppy.gif)
 
 # URL Parameters in Another Route
 
