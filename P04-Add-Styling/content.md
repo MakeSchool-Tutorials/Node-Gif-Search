@@ -121,7 +121,7 @@ Now let's add some more styles!
   }
 ```
 
-Ok no we have things looking a little prettier!
+Ok now we have things looking a little prettier! Great job on **styling the elements in your project!**
 
 > [challenge]
 >

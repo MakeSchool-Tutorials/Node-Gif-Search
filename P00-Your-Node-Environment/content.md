@@ -11,6 +11,16 @@ Now Node is a fast growing and popular web server. And now you get to learn how 
 
 If you haven't been to [Tenor](https://tenor.com) before, head over to their website now to see how it works.
 
+# Learning Outcomes
+
+By the end of this tutorial, you should be able to...
+
+1. Set up a development environment for building a node.js-powered website
+1. Use a templating engine to quickly create layouts for your website
+1. Build basic route logic that uses parameters
+1. Integrate a simple API into your project
+1. Style elements in your project beyond the default
+
 # Setting Up Your Node Environment with Package Managers
 
 We're going to use NodeJS as our **web server** for this project. We could write just plain JavaScript to use NodeJS, but that would mean writing a lot of **boilerplate**. Instead, we will use the **web framework** ExpressJS, which uses NodeJS.
@@ -269,4 +279,4 @@ $ git commit -m 'first route built'
 $ git push
 ```
 
-Excellent, now let's keep building this out!
+Excellent work! By this point you've established a **fully set up development environment for building a node.js-powered website!** Now let's build this into an actual search engine for gifs!

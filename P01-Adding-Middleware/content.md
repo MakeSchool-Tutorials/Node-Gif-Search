@@ -136,7 +136,7 @@ Try going to `localhost:3000/greetings/Bethany` (or any name of your choosing) a
 
 ![greeting](assets/greeting.png)
 
-Great work! We added some views, and also made some more complex routes that pass variables into our layouts! Let's make sure to save our progress:
+Great work! We successfully **used a templating engine to quickly create layouts, and also built some basic route logic that uses parameters!** Let's make sure to save our progress:
 
 # Now Commit
 

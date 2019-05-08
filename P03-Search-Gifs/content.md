@@ -129,6 +129,8 @@ $ git commit -m 'added working gif search'
 $ git push
 ```
 
+Great work! You've successfully **integrated a simple API into your project!**
+
 # Connecting to the Tenor API with `http` (optional stretch challenge)
 
 Now that we've setup receiving the `tenorjs` package. As a strech challenge you can implement the query to the API without a library using Node's native `http` module, and deal with the stream of data coming from that http endpoint.
