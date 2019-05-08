@@ -125,7 +125,10 @@ Ok no we have things looking a little prettier!
 
 > [challenge]
 >
-> You've learned a lot in this tutorial! If you're looking for an extra challenge, add a button that displays the trending gifs from Tenor. This should not require a search term. Give the button a different style than the search one to flex your new styling muscles some more!
+> You've learned a lot in this tutorial! Try these extra challenges out if you're looking for something more:
+>
+> 1. The search box and gifs are all left-aligned. Get them all to be centered like the `h1` element
+> 1. Add a button that displays the trending gifs from Tenor. This should not require a search term. Give the button a different style than the search one to flex your new styling muscles some more!
 
 # Feedback and Review - 2 minutes
 
