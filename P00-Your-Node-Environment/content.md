@@ -241,8 +241,6 @@ app.get('/:username', (req, res) => {
 
 This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
 
-This is an example of an endpoint or route. It is called a **GET** route because we are "getting" information to read, not saving or changing information in the database. Hence, the function name we call is `app.get()`. Remember that `app()` is an instance of Express, and that means that the `get()` function is a native Express function (not middleware that we added).
-
 For reference you can look at [ExpressJS's Getting Started](https://expressjs.com/en/starter/installing.html) docs
 
 > [action]
