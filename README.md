@@ -1,4 +1,4 @@
-# Tenor Tutorial
+# Gif Search Tutorial
 
 ## What you will learn
 
