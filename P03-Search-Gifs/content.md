@@ -110,7 +110,41 @@ $ npm install tenorjs --save
   })
   ```
 
+## What did we just add?
+
+Let's break down what happened above in a bit more detail:
+
+`const Tenor = require("tenorjs").client({... })`
+
+This is how we'll require the `TenjorJS` API wrapper, which will allow us to interact with the Tenor API! We'll save our reference to it in a `const`, making sure to supply it with required parameters that tell us what GIF filter and locale we're in. Most importantly, we're passing our private API key, which lets Tenor know we're authorized to access its API
+
+> [info]
+>
+> As a best practice, we do _not_ want to store private API keys plainly in our code, as it leaves us vulnerable to having that information stolen. For the purpose of this tutorial, we want you to get familiar with the basics of route logic and simple API calls. In future classes, you will learn how to securely store information like this so you don't deploy private information to the public!
+
+`app.get('/', (req, res) => { ... }`
+
+Here we define our route! A route defines the URL that will make a certain page display. The `/` route is the root route. So the our GIF site we're building should display at http://localhost:3000/
+
 Now navigate to `/` and see your gifs. You should see 10 gifs, as that's the limit we gave `tenorjs`
+
+`term = ""
+if (req.query.term) {
+    term = req.query.term
+}`
+
+Did we pass in a search query term? We can check `req.query.term` to see if one exists, and if so, set it so we can search for it.
+
+`Tenor.Search.Query(term, "10")
+    .then(response => {
+        const gifs = response;
+        res.render('home', { gifs })
+    }).catch(console.error);
+})`
+
+Finally, here is our API call! We use `TenorJS` to call Tenor's Search API through `Search.Query`. We pass along our search term, and that we want the first 10 results. the `then` function is used to describe what should happen once the call to the API is completed. Once Tenor responds with our 10 GIFs, then we want to set that response to a `const` (`gifs`) that we pass along to our page. We then call `res.render` to render our `home` page, passing along the `gifs` as an object for us to use and display on the home page. And if anything goes wrong during our API call, then that's what `catch` is for! We'll log the error the console, and keep the site from blowing up in an error.
+
+## Whew, ok I feel better now. Let's try it!
 
 When you refresh your root route with nothing in the form, why do you still see GIFs?
 
