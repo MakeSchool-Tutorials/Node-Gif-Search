@@ -35,7 +35,7 @@ But remember how Express is lightweight? It is SO lightweight that it doesn't ev
 app.use(express.static('public'));
 ```
 >
-> 3) Now add a file called `public/styles.css`.
+> 3) Now add a file called `styles.css` in your newly created `public` folder.
 >
 > 4) Now link that file in the `<head>` of `views/layouts/main.handlebars`.
 >

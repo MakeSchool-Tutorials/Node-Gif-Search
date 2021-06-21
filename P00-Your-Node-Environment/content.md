@@ -258,7 +258,7 @@ Go back to `localhost:3000` in your browser and make sure it says "Hello Squirre
 
 # Now Commit
 
-Whenever you see a green box like the one below, it marks a **stretch challenge**. Unlike action boxes (denoted by the stars), stretch challenges are are optional, and aren't needed to complete the tutorial. If you're looking for an extra challenge though, we encourage you to take them on!
+Whenever you see a green box like the one below, it marks a **stretch challenge**. Unlike action boxes (denoted by the keyboard icon), stretch challenges are are optional, and aren't needed to complete the tutorial. If you're looking for an extra challenge though, we encourage you to take them on!
 
 > [challenge]
 >
